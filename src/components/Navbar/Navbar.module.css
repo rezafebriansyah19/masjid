@@ -1,0 +1,544 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(74, 222, 128, 0.1);
+  transition: all 0.3s ease;
+  padding: 0.75rem 0;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.navbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styles */
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.navbarLogo:hover {
+  transform: scale(1.02);
+}
+
+.logoImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.logoSubtitle {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* Desktop Menu */
+.navbarMenu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbarLink {
+  position: relative;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbarLink:hover {
+  color: white;
+}
+
+.navbarLink.active {
+  color: #4ade80;
+}
+
+.linkUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  transition: width 0.3s ease;
+}
+
+.navbarLink:hover .linkUnderline,
+.navbarLink.active .linkUnderline {
+  width: 100%;
+}
+
+/* Desktop CTA Buttons */
+.navbarActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #4ade80;
+  border: 2px solid #4ade80;
+}
+
+.ctaSecondary:hover {
+  background: rgba(74, 222, 128, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.2);
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonIcon {
+  transform: scale(1.1);
+}
+
+/* Mobile Toggle - Modern Burger */
+.navbarToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 18px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.burgerLine {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #4ade80;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbarToggle.active .burgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbarToggle.active .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarToggle.active .burgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobileOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu Sidebar */
+.navbarMobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  z-index: 999;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(74, 222, 128, 0.2);
+  box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.navbarMobile.active {
+  right: 0;
+}
+
+/* Mobile Header */
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.1);
+}
+
+.mobileLogoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobileLogo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.mobileLogoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLogoTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.mobileLogoSubtitle {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+}
+
+.mobileCloseButton {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobileCloseButton:hover {
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.closeIcon {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.mobileCloseButton:hover .closeIcon {
+  color: #4ade80;
+  transform: scale(1.1);
+}
+
+/* Mobile Navigation Links */
+.mobileMenuLinks {
+  flex: 1;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.mobileLink:hover {
+  background: rgba(74, 222, 128, 0.1);
+  color: white;
+  border-left-color: #4ade80;
+}
+
+.mobileLink.active {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  border-left-color: #4ade80;
+}
+
+.mobileLinkIcon {
+  font-size: 1.125rem;
+  width: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mobileLink:hover .mobileLinkIcon {
+  transform: scale(1.1);
+}
+
+/* Mobile CTA Section */
+.mobileActions {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(74, 222, 128, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileCTATitle {
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.mobileCtaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileCtaSecondary {
+  background: transparent;
+  color: #4ade80;
+  border: 2px solid #4ade80;
+}
+
+.mobileCtaSecondary:hover {
+  background: rgba(74, 222, 128, 0.1);
+  transform: translateY(-2px);
+}
+
+.mobileCtaPrimary {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.mobileCtaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
+}
+
+.mobileButtonIcon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileCtaButton:hover .mobileButtonIcon {
+  transform: scale(1.1);
+}
+
+/* Mobile Footer */
+.mobileFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(74, 222, 128, 0.1);
+}
+
+.mobileFooterText {
+  color: #64748b;
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbarMenu {
+    gap: 1.5rem;
+  }
+  
+  .navbarActions {
+    gap: 0.75rem;
+  }
+  
+  .ctaButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarMenu,
+  .navbarActions {
+    display: none;
+  }
+  
+  .navbarToggle {
+    display: flex;
+  }
+  
+  .navbarContainer {
+    padding: 0 1rem;
+  }
+  
+  .logoTitle {
+    font-size: 1.125rem;
+  }
+  
+  .logoSubtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarMobile {
+    width: 280px;
+  }
+  
+  .mobileHeader {
+    padding: 1rem;
+  }
+  
+  .mobileMenuLinks {
+    padding: 1rem 0;
+  }
+  
+  .mobileLink {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobileLinkIcon {
+    font-size: 1rem;
+    width: 18px;
+  }
+  
+  .mobileActions {
+    padding: 1rem;
+  }
+  
+  .mobileCtaButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .mobileButtonIcon {
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation for mobile menu */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbarLink,
+  .ctaButton,
+  .mobileLink,
+  .mobileCtaButton,
+  .mobileLinkIcon,
+  .mobileButtonIcon,
+  .buttonIcon {
+    transition: none;
+  }
+  
+  .navbarMobile {
+    transition: none;
+  }
+  
+  .ctaButton:hover,
+  .mobileCtaButton:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,532 @@
+.galeri {
+  min-height: 100vh;
+}
+.heroSection {
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(74, 222, 128, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Filter Section */
+.filterSection {
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+  position: sticky;
+  top: 80px;
+  z-index: 90;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #1e293b;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.filterButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.filterButton:hover::before {
+  left: 100%;
+}
+
+.filterButton:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.filterButton.active {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Gallery Section */
+.gallerySection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 60vh;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 20px 0;
+}
+
+.galleryItem {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(74, 222, 128, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.6s ease-out;
+  position: relative;
+}
+
+.galleryItem:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.9) 0%, rgba(34, 211, 238, 0.9) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover .imageOverlay {
+  opacity: 1;
+}
+
+.expandIcon {
+  font-size: 2rem;
+  color: white;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover .expandIcon {
+  transform: scale(1.2);
+}
+
+.imageInfo {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.imageTitle {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.imageCategory {
+  font-size: 0.8rem;
+  color: white;
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: modalSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #1e293b;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton:hover {
+  background: #ef4444;
+  color: white;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modalImage {
+  padding: 40px 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.modalImageActual {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.5s ease-out;
+}
+
+.modalInfo {
+  padding: 30px 40px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modalDescription {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.modalCategory {
+  font-size: 0.9rem;
+  color: white;
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
+}
+
+/* Loading animation for images */
+.galleryImage {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+.galleryImage[src] {
+  animation: none;
+  background: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .filterButtons {
+    gap: 0.5rem;
+  }
+  
+  .filterButton {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  .modalContent {
+    margin: 10px;
+    max-height: 95vh;
+  }
+  
+  .modalImage {
+    padding: 30px 20px 15px;
+  }
+  
+  .modalInfo {
+    padding: 20px;
+  }
+  
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filterButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filterButton {
+    width: 200px;
+  }
+  
+  .imageWrapper {
+    height: 200px;
+  }
+  
+  .modalImageActual {
+    max-height: 300px;
+  }
+}
+
+/* High-resolution displays */
+@media (min-width: 1920px) {
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .galleryItem,
+  .filterButton,
+  .modalContent,
+  .closeButton {
+    transition: none;
+    animation: none;
+  }
+  
+  .filterButton::before,
+  .galleryItem::before {
+    display: none;
+  }
+}
+
+/* Hover effects for gallery items */
+.galleryItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.galleryItem:hover::before {
+  left: 100%;
+}
+
+/* Custom scrollbar for modal */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #22d3ee, #4ade80);
+}
