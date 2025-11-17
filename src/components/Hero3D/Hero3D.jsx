@@ -2,7 +2,10 @@ import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Sparkles, Stars, Text, Float } from '@react-three/drei';
 import * as THREE from 'three';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
 import styles from './Hero3D.module.css';
 
 const MosqueModel = () => {
@@ -177,6 +180,7 @@ const MosqueModel = () => {
 };
 
 const Hero3D = () => {
+<<<<<<< HEAD
   // Fungsi untuk menangani link eksternal
   const handleExternalLink = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -184,6 +188,8 @@ const Hero3D = () => {
 
   const donasiLink = "https://masjidkinclong.biolinku.biz.id/donasi-masjid-kinclong-99?fbclid=PAZXh0bgNhZW0CMTEAAacvccDbJgb9KYSNp7NJLVz7WxIRhH0AZcKnZlKMI5OgBZDny6aw15N-huDo";
 
+=======
+>>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   return (
     <div className={styles.hero3D}>
       <Canvas
@@ -261,11 +267,17 @@ const Hero3D = () => {
         </p>
         
         <div className={styles.ctaSection}>
+<<<<<<< HEAD
           <button 
             onClick={() => handleExternalLink(donasiLink)}
             className={`${styles.ctaButton} ${styles.ctaPrimary}`}
           >
             Yuk bergabung jadi donatur dalam gerakan <br /> bersih masjid ini 1 Masjid 1 Keluarga
+=======
+          <button className={styles.ctaButton}>
+            <span className={styles.buttonText}>Bersihkan Masjid Bersama Kami</span>
+            <div className={styles.buttonGlow}></div>
+>>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
           </button>
           
           <div className={styles.stats}>
