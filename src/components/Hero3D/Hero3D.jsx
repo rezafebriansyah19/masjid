@@ -270,15 +270,15 @@ const Hero3D = () => {
           
           <div className={styles.stats}>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>150+</span>
+              <span className={styles.statNumber}>2000+</span>
               <span className={styles.statLabel}>Masjid Terbantu</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>200+</span>
-              <span className={styles.statLabel}>Relawan</span>
+              <span className={styles.statNumber}>30+</span>
+              <span className={styles.statLabel}>Duta Aktif</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>14</span>
+              <span className={styles.statNumber}>15</span>
               <span className={styles.statLabel}>Wilayah</span>
             </div>
           </div>

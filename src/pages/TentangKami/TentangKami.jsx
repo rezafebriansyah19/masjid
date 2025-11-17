@@ -449,9 +449,7 @@ const TentangKami = () => {
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Struktur Kepengurusan</h2>
-            <p className={styles.sectionSubtitle}>
-              Tim profesional yang berdedikasi penuh untuk kemajuan yayasan
-            </p>
+
           </div>
 
           <div className={styles.teamSlider}>
@@ -572,7 +570,6 @@ const TentangKami = () => {
                   )}
                   {partner.externalLink && (
                     <div className={styles.partnerExternalLinkIndicator}>
-                      <FaExternalLinkAlt />
                     </div>
                   )}
                 </div>
