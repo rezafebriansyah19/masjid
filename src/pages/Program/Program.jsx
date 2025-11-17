@@ -32,11 +32,7 @@ const Program = () => {
         'Standar kebersihan profesional',
         'Peralatan kebersihan lengkap'
       ],
-<<<<<<< HEAD
       stats: { masjid: '2000+', relawan: '30+', kota: '15+' },
-=======
-      stats: { masjid: '250+', relawan: '800+', kota: '50+' },
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
       gradient: 'from-green-500 to-emerald-500',
       duration: '2-4 jam/sesi',
       location: 'Seluruh Indonesia'

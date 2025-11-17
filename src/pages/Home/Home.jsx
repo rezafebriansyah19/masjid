@@ -17,42 +17,25 @@ import styles from './Home.module.css';
 const Home = () => {
   const stats = [
     { 
-<<<<<<< HEAD
       number: '2000+', 
-=======
-      number: '1800+', 
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
       label: 'Masjid Dibersihkan', 
       icon: <FaMosque />,
       gradient: 'from-green-400 to-cyan-400'
     },
     { 
-<<<<<<< HEAD
       number: '30+', 
       label: 'Duta Aktif', 
-=======
-      number: '200+', 
-      label: 'Relawan Aktif', 
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
       icon: <FaUsers />,
       gradient: 'from-cyan-400 to-blue-400'
     },
     { 
-<<<<<<< HEAD
       number: '15+', 
-=======
-      number: '14+', 
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
       label: 'Kota/Kabupaten', 
       icon: <FaMapMarkerAlt />,
       gradient: 'from-blue-400 to-purple-400'
     },
     { 
-<<<<<<< HEAD
       number: '2.000+', 
-=======
-      number: '25.000+', 
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
       label: 'Jamaah Terbantu', 
       icon: <FaHeart />,
       gradient: 'from-purple-400 to-pink-400'
@@ -161,26 +144,17 @@ const Home = () => {
               Landasan perjuangan kami dalam mewujudkan masjid yang bersih dan nyaman
             </p>
           </div>
-<<<<<<< HEAD
           <br />
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
           <div className={styles.missionContent}>
             <div className={styles.missionText}>
               <div className={styles.missionMain}>
                 <p className={styles.missionDescription}>
-<<<<<<< HEAD
                   Masjid Kinclong adalah gerakan cinta masjid / gerakan bersih masjid yang diinisiasi oleh Sahabat Surga,
                   Donatur keluarga 3000 sebagai wujud kepedulian terhadap rumah Allah.
                   <br />
                   Gerakan ini bukan hanya bersih-bersih, tapi juga menjadi api bisnis dari EOA Miracle Gold,
                   Wakaf Peradaban Internasional yang menghidupkan nilai gotong royong,
                   spiritualitas, dan kemakmuran umat melalui masjid.
-=======
-                  Yayasan Masjid Kinclong berkomitmen untuk menciptakan lingkungan masjid yang bersih, 
-                  nyaman, dan kondusif untuk ibadah. Kami meyakini bahwa kebersihan masjid adalah 
-                  cerminan kemuliaan umat Islam dan bagian tak terpisahkan dari ibadah itu sendiri.
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 </p>
                 
                 <div className={styles.valuesList}>

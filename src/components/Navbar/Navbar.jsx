@@ -49,10 +49,6 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.navbarContainer}>
-<<<<<<< HEAD
-=======
-        {/* Logo Section */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
         <Link to="/" className={styles.navbarLogo} onClick={closeMenu}>
           <img 
             src={logoYayasan} 
@@ -61,18 +57,10 @@ const Navbar = () => {
           />
           <div className={styles.logoText}>
             <span className={styles.logoTitle}>Masjid Kinclong</span>
-<<<<<<< HEAD
             <span className={styles.logoSubtitle}>Gerakan Masjid Bersih</span>
           </div>
         </Link>
 
-=======
-            <span className={styles.logoSubtitle}>Yayasan Sahabat Surga</span>
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
         <div className={styles.navbarMenu}>
           <Link 
             to="/" 
@@ -116,10 +104,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* CTA Buttons - Desktop */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
         <div className={styles.navbarActions}>
           <button 
             onClick={() => handleExternalLink(relawanLink)}
@@ -137,10 +121,6 @@ const Navbar = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Mobile Menu Toggle */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
         <button 
           className={`${styles.navbarToggle} ${isMenuOpen ? styles.active : ''}`} 
           onClick={toggleMenu}
@@ -153,18 +133,9 @@ const Navbar = () => {
           </div>
         </button>
 
-<<<<<<< HEAD
         <div className={`${styles.mobileOverlay} ${isMenuOpen ? styles.active : ''}`} onClick={closeMenu}></div>
 
         <div className={`${styles.navbarMobile} ${isMenuOpen ? styles.active : ''}`}>
-=======
-        {/* Mobile Overlay */}
-        <div className={`${styles.mobileOverlay} ${isMenuOpen ? styles.active : ''}`} onClick={closeMenu}></div>
-
-        {/* Mobile Menu Sidebar */}
-        <div className={`${styles.navbarMobile} ${isMenuOpen ? styles.active : ''}`}>
-          {/* Mobile Header */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
           <div className={styles.mobileHeader}>
             <div className={styles.mobileLogoSection}>
               <img 
@@ -230,10 +201,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Mobile CTA Section */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
           <div className={styles.mobileActions}>
             <div className={styles.mobileCTATitle}>Mari Berkontribusi</div>
             <button 
@@ -252,10 +219,6 @@ const Navbar = () => {
             </button>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Mobile Footer */}
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
           <div className={styles.mobileFooter}>
             <div className={styles.mobileFooterText}>
               Bersama membersihkan, bersama memberkahi

@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { FaSearch, FaExpand, FaPlay, FaInstagram } from 'react-icons/fa';
-=======
-import { FaSearch, FaExpand } from 'react-icons/fa';
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
 import styles from './Galeri.module.css';
 
 import gambar1 from '../../assets/1.jpg';
@@ -28,139 +24,94 @@ const Galeri = () => {
       title: 'Kegiatan Bersih Masjid 1',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-1',
       category: 'Pembersihan',
-<<<<<<< HEAD
       image: gambar1,
       type: 'image'
-=======
-      image: gambar1
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 2,
       title: 'Kegiatan Bersih Masjid 2',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-2',
       category: 'Relawan',
-<<<<<<< HEAD
       image: gambar2,
       type: 'image'
-=======
-      image: gambar2
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 3,
       title: 'Kegiatan Bersih Masjid 3',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-3',
       category: 'Kegiatan Sosial',
-<<<<<<< HEAD
       image: gambar3,
       type: 'image'
-=======
-      image: gambar3
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 4,
       title: 'Kegiatan Bersih Masjid 4',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-4',
       category: 'Pembersihan',
-<<<<<<< HEAD
       image: gambar4,
       type: 'image'
-=======
-      image: gambar4
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 5,
       title: 'Kegiatan Bersih Masjid 5',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-5',
       category: 'Relawan',
-<<<<<<< HEAD
       image: gambar5,
       type: 'image'
-=======
-      image: gambar5
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 6,
       title: 'Kegiatan Bersih Masjid 6',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-6',
       category: 'Kegiatan Sosial',
-<<<<<<< HEAD
       image: gambar6,
       type: 'image'
-=======
-      image: gambar6
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 7,
       title: 'Kegiatan Bersih Masjid 7',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-7',
       category: 'Pembersihan',
-<<<<<<< HEAD
       image: gambar7,
       type: 'image'
-=======
-      image: gambar7
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 8,
       title: 'Kegiatan Bersih Masjid 8',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-8',
       category: 'Relawan',
-<<<<<<< HEAD
       image: gambar8,
       type: 'image'
-=======
-      image: gambar8
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 9,
       title: 'Kegiatan Bersih Masjid 9',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-9',
       category: 'Kegiatan Sosial',
-<<<<<<< HEAD
       image: gambar9,
       type: 'image'
-=======
-      image: gambar9
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 10,
       title: 'Kegiatan Bersih Masjid 10',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-10',
       category: 'Pembersihan',
-<<<<<<< HEAD
       image: gambar10,
       type: 'image'
-=======
-      image: gambar10
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 11,
       title: 'Kegiatan Bersih Masjid 11',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-11',
       category: 'Relawan',
-<<<<<<< HEAD
       image: gambar11,
       type: 'image'
-=======
-      image: gambar11
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     {
       id: 12,
       title: 'Kegiatan Bersih Masjid 12',
       description: 'Foto dokumentasi kegiatan pembersihan masjid ke-12',
       category: 'Kegiatan Sosial',
-<<<<<<< HEAD
       image: gambar12,
       type: 'image'
     },
@@ -172,9 +123,6 @@ const Galeri = () => {
       videoUrl: 'https://www.instagram.com/reel/DN3lUOB5OHE/?igsh=MWt4aTZnaGgyc3JtMg==',
       type: 'video',
       thumbnail: '/images/video-thumbnail.jpg' 
-=======
-      image: gambar12
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     }
   ];
 
@@ -185,20 +133,14 @@ const Galeri = () => {
     ? galleryImages 
     : galleryImages.filter(img => img.category === activeCategory);
 
-<<<<<<< HEAD
   const openModal = (item) => {
     setSelectedImage(item);
-=======
-  const openModal = (image) => {
-    setSelectedImage(image);
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   };
 
   const closeModal = () => {
     setSelectedImage(null);
   };
 
-<<<<<<< HEAD
   // Fungsi untuk handle external link
   const handleExternalLink = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -243,8 +185,6 @@ const Galeri = () => {
     }
   };
 
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   return (
     <div className={styles.galeri}>
       {/* Hero Section */}
@@ -278,7 +218,6 @@ const Galeri = () => {
       <section className={`section ${styles.gallerySection}`}>
         <div className="container">
           <div className={styles.galleryGrid}>
-<<<<<<< HEAD
             {filteredImages.map(item => (
               <div 
                 key={item.id} 
@@ -307,27 +246,6 @@ const Galeri = () => {
                 <div className={styles.imageInfo}>
                   <span className={styles.imageTitle}>{item.title}</span>
                   <span className={styles.imageCategory}>{item.category}</span>
-=======
-            {filteredImages.map(image => (
-              <div 
-                key={image.id} 
-                className={styles.galleryItem}
-                onClick={() => openModal(image)}
-              >
-                <div className={styles.imageWrapper}>
-                  <img 
-                    src={image.image} 
-                    alt={image.title}
-                    className={styles.galleryImage}
-                  />
-                  <div className={styles.imageOverlay}>
-                    <FaExpand className={styles.expandIcon} />
-                  </div>
-                </div>
-                <div className={styles.imageInfo}>
-                  <span className={styles.imageTitle}>{image.title}</span>
-                  <span className={styles.imageCategory}>{image.category}</span>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 </div>
               </div>
             ))}
@@ -340,23 +258,13 @@ const Galeri = () => {
         <div className={styles.modal} onClick={closeModal}>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={closeModal}>×</button>
-<<<<<<< HEAD
             <div className={`${styles.modalImage} ${selectedImage.type === 'video' ? styles.videoModal : ''}`}>
               {renderMediaContent(selectedImage, true)}
-=======
-            <div className={styles.modalImage}>
-              <img 
-                src={selectedImage.image} 
-                alt={selectedImage.title}
-                className={styles.modalImageActual}
-              />
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
             </div>
             <div className={styles.modalInfo}>
               <h3 className={styles.modalTitle}>{selectedImage.title}</h3>
               <p className={styles.modalDescription}>{selectedImage.description}</p>
               <span className={styles.modalCategory}>{selectedImage.category}</span>
-<<<<<<< HEAD
               {selectedImage.type === 'video' && (
                 <div className={styles.videoActions}>
                   <button 
@@ -368,8 +276,6 @@ const Galeri = () => {
                   </button>
                 </div>
               )}
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
             </div>
           </div>
         </div>

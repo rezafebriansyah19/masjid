@@ -16,12 +16,8 @@ import {
   FaChevronRight,
   FaMapMarkerAlt,
   FaCalendarAlt,
-<<<<<<< HEAD
   FaUserFriends,
   FaExternalLinkAlt
-=======
-  FaUserFriends
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
 } from 'react-icons/fa';
 import styles from './TentangKami.module.css';
 
@@ -33,10 +29,7 @@ import Logo5 from '../../assets/logo5.png';
 import Logo6 from '../../assets/logo6.png';
 import Logo7 from '../../assets/logo7.png';
 import Logo8 from '../../assets/logo8.png';
-<<<<<<< HEAD
 import yayasan_cita from '../../assets/yayasan_cita.jpg';
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
 
 const TentangKami = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,14 +53,11 @@ const TentangKami = () => {
     return () => observer.disconnect();
   }, []);
 
-<<<<<<< HEAD
   // Fungsi untuk handle external link
   const handleExternalLink = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   const teamMembers = [
     { 
       name: 'Coach Faisal Ramli', 
@@ -75,14 +65,9 @@ const TentangKami = () => {
       bio: 'Pendiri dan penggerak utama Yayasan Sahabat Surga. Memiliki visi besar dalam memberdayakan masyarakat melalui program kebersihan masjid.',
       expertise: ['Leadership', 'Strategic Planning', 'Community Development'],
       photo: '/images/team/faisal-ramli.jpeg',
-<<<<<<< HEAD
       location: 'Tanggerang',
       joinDate: '2024',
       externalLink: 'https://www.instagram.com/coachfaisalramli?igsh=MTVmYzBxMHI1NWdjNw=='
-=======
-      location: 'Jakarta',
-      joinDate: '2020'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Eva Wardah', 
@@ -91,12 +76,8 @@ const TentangKami = () => {
       expertise: ['National Coordination', 'Team Management', 'Program Execution'],
       photo: '/images/team/eva-wardah.jpg',
       location: 'Depok',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongdepok.biolinku.biz.id/' 
-=======
-      joinDate: '2021'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Irwandi', 
@@ -105,12 +86,8 @@ const TentangKami = () => {
       expertise: ['Regional Leadership', 'Community Engagement', 'Local Coordination'],
       photo: '/images/team/Irwandi.jpg',
       location: 'Pasangkayu',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongpasangkayu.biolinku.biz.id/' 
-=======
-      joinDate: '2021'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Syukri Jadas', 
@@ -119,12 +96,8 @@ const TentangKami = () => {
       expertise: ['Disaster Area Management', 'Volunteer Coordination', 'Rehabilitation'],
       photo: '/images/team/syukri-jadas.jpg',
       location: 'Palu',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongpalu.biolinku.biz.id/'
-=======
-      joinDate: '2021'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Irgie', 
@@ -133,12 +106,8 @@ const TentangKami = () => {
       expertise: ['Youth Engagement', 'Event Organization', 'Digital Marketing'],
       photo: '/images/team/irgie.jpg',
       location: 'Malang',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongmalang.biolinku.biz.id/'
-=======
-      joinDate: '2022'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'H. Maman', 
@@ -147,12 +116,8 @@ const TentangKami = () => {
       expertise: ['Traditional Community', 'Local Wisdom', 'Sustainable Program'],
       photo: '/images/team/h-maman.jpg',
       location: 'Karawang',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongkarawang.biolinku.biz.id/'
-=======
-      joinDate: '2021'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Firmansyah', 
@@ -161,12 +126,8 @@ const TentangKami = () => {
       expertise: ['Local Adaptation', 'Cultural Approach', 'Rural Development'],
       photo: '/images/team/firmansyah.jpg',
       location: 'Cianjur',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongcianjur.biolinku.biz.id/'
-=======
-      joinDate: '2022'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Nurul Hidayat', 
@@ -175,12 +136,8 @@ const TentangKami = () => {
       expertise: ['Campus Movement', 'Student Engagement', 'Academic Collaboration'],
       photo: '/images/team/nurul-hidayat.jpg',
       location: 'Jatinangor',
-<<<<<<< HEAD
       joinDate: '2025',
       externalLink: 'https://masjidkinclongjatinangor.biolinku.biz.id/'
-=======
-      joinDate: '2022'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Farhan Maulana', 
@@ -189,12 +146,8 @@ const TentangKami = () => {
       expertise: ['Eastern Indonesia', 'Cultural Integration', 'Remote Area'],
       photo: '/images/team/farhan-maulana.jpg',
       location: 'Gorontalo',
-<<<<<<< HEAD
       joinDate: '2025',
       externalLink: 'https://masjidkinclonggorontalo.biolinku.biz.id/'
-=======
-      joinDate: '2023'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Wildan', 
@@ -203,12 +156,8 @@ const TentangKami = () => {
       expertise: ['Heritage Conservation', 'Tourism Integration', 'Historical Sites'],
       photo: '/images/team/wildan.jpg',
       location: 'Sukabumi',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongsukabumi.biolinku.biz.id/'
-=======
-      joinDate: '2022'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Fauzan Al Mumayyiz', 
@@ -217,12 +166,8 @@ const TentangKami = () => {
       expertise: ['Urban Development', 'Metropolitan Strategy', 'Multi-cultural'],
       photo: '/images/team/fauzan-al-mumayyiz.jpg',
       location: 'Makassar',
-<<<<<<< HEAD
       joinDate: '2025',
       externalLink: 'https://masjidkinclongmakassar.biolinku.biz.id/'
-=======
-      joinDate: '2023'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Adil', 
@@ -231,12 +176,8 @@ const TentangKami = () => {
       expertise: ['Cultural City', 'Educational Approach', 'Student City'],
       photo: '/images/team/adil.jpg',
       location: 'Yogyakarta',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclongyogyakarta.biolinku.biz.id/'
-=======
-      joinDate: '2022'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Ade Faisal', 
@@ -245,12 +186,8 @@ const TentangKami = () => {
       expertise: ['Rural Development', 'Agricultural Community', 'Traditional Values'],
       photo: '/images/team/ade-faisal.jpg',
       location: 'Garut',
-<<<<<<< HEAD
       joinDate: '2024',
       externalLink: 'https://masjidkinclonggarut.biolinku.biz.id/'
-=======
-      joinDate: '2023'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Ilham', 
@@ -259,12 +196,8 @@ const TentangKami = () => {
       expertise: ['Small City Development', 'Community Mobilization', 'Local Innovation'],
       photo: '/images/team/ilham.jpg',
       location: 'Prabumulih',
-<<<<<<< HEAD
       joinDate: '2025',
       externalLink: 'https://masjidkinclongprabumulih.biolinku.biz.id/'
-=======
-      joinDate: '2023'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
     { 
       name: 'Fahril', 
@@ -273,12 +206,8 @@ const TentangKami = () => {
       expertise: ['Central Java', 'Traditional Community', 'Sustainable Practice'],
       photo: '/images/team/fahril.jpg',
       location: 'Klaten',
-<<<<<<< HEAD
       joinDate: '2025',
       externalLink: 'https://masjidkinclongklaten.biolinku.biz.id/'
-=======
-      joinDate: '2023'
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
     },
   ];
 
@@ -322,7 +251,6 @@ const TentangKami = () => {
   ];
 
   const partners = [
-<<<<<<< HEAD
     { name: 'Pejuang Masjid Kinclong', type: 'Pejuang', logo: Logo1, externalLink: "https://sahabatmasjid.biolinku.biz.id/" },
     { name: 'Laz Abulyatama Indonesia', type: 'Lembaga Zakat Nasional', logo: Logo2, externalLink: 'https://www.instagram.com/abulyatama.indonesia?igsh=bWZld3IzMnhpNWxt' },
     { name: 'WPI', type: 'Wakaf Peradaban', logo: Logo3, externalLink: 'https://www.instagram.com/wakafperadaban?igsh=MW8wNWJraTEzbTdzMw==' },
@@ -339,24 +267,6 @@ const TentangKami = () => {
     { year: '2025', event: 'Program Nasional', description: 'Meluncurkan program masjid kinclong Nasional tersebar di 15 kota' },
     { year: '2025', event: 'Ekspansi Duta Masjid Kinclong', description: 'Menjaring duta dari berbagai daerah' },
     { year: '2025', event: 'Digital Platform', description: 'Meluncurkan platform digital' },
-=======
-    { name: 'Pejuang Masjid Kinclong', type: 'Pejuang', logo: Logo1 },
-    { name: 'YAI', type: 'Lembaga Sosial', logo: Logo2 },
-    { name: 'WPI', type: 'Lembaga Sosial', logo: Logo3 },
-    { name: 'Keluarga 3000', type: 'Kemanusiaan', logo: Logo4 },
-    { name: 'Sahabat Surga', type: 'Internasional', logo: Logo5 },
-    { name: 'Miracle Gold', type: 'Mitra Strategis', logo: Logo6 },
-    { name: 'RQ PPA', type: 'Yayasan', logo: Logo7 },
-    { name: 'Sedekah Listrik', type: 'Corporate', logo: Logo8 },
-  ];
-
-  const milestones = [
-    { year: '2020', event: 'Pendirian Yayasan', description: 'Yayasan resmi berdiri dengan visi membersihkan masjid' },
-    { year: '2021', event: 'Program Nasional', description: 'Meluncurkan program bersih masjid di 10 kota' },
-    { year: '2022', event: 'Ekspansi Relawan', description: 'Menjaring 1,000+ relawan dari berbagai daerah' },
-    { year: '2023', event: 'Penghargaan', description: 'Mendapatkan penghargaan lembaga sosial terbaik' },
-    { year: '2024', event: 'Digital Platform', description: 'Meluncurkan platform digital untuk donasi online' },
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   ];
 
   const slidesToShow = 6; 
@@ -379,7 +289,6 @@ const TentangKami = () => {
     return teamMembers.slice(startIndex, startIndex + slidesToShow);
   };
 
-<<<<<<< HEAD
   // Fungsi untuk handle klik foto member
   const handleMemberPhotoClick = (member) => {
     if (member.externalLink) {
@@ -394,8 +303,6 @@ const TentangKami = () => {
     }
   };
 
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
   return (
     <div className={styles.tentangKami} ref={sectionRef}>
       {/* Hero Section */}
@@ -411,11 +318,7 @@ const TentangKami = () => {
             </p>
             <div className={styles.heroStats}>
               <div className={styles.heroStat}>
-<<<<<<< HEAD
                 <div className={styles.statNumber}>1+</div>
-=======
-                <div className={styles.statNumber}>4+</div>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 <div className={styles.statLabel}>Tahun Pengalaman</div>
               </div>
               <div className={styles.heroStat}>
@@ -423,13 +326,8 @@ const TentangKami = () => {
                 <div className={styles.statLabel}>Kota/Kabupaten</div>
               </div>
               <div className={styles.heroStat}>
-<<<<<<< HEAD
                 <div className={styles.statNumber}>30+</div>
                 <div className={styles.statLabel}>Duta Aktif</div>
-=======
-                <div className={styles.statNumber}>1,500+</div>
-                <div className={styles.statLabel}>Relawan Aktif</div>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
               </div>
             </div>
           </div>
@@ -500,19 +398,11 @@ const TentangKami = () => {
                 <div className={styles.achievementList}>
                   <div className={styles.achievementItem}>
                     <FaCheckCircle className={styles.achievementCheck} />
-<<<<<<< HEAD
                     <span>2000+ Masjid dibersihkan</span>
                   </div>
                   <div className={styles.achievementItem}>
                     <FaCheckCircle className={styles.achievementCheck} />
                     <span>30+ Duta aktif</span>
-=======
-                    <span>250+ Masjid dibersihkan</span>
-                  </div>
-                  <div className={styles.achievementItem}>
-                    <FaCheckCircle className={styles.achievementCheck} />
-                    <span>1,500+ Relawan aktif</span>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                   </div>
                   <div className={styles.achievementItem}>
                     <FaCheckCircle className={styles.achievementCheck} />
@@ -520,18 +410,9 @@ const TentangKami = () => {
                   </div>
                   <div className={styles.achievementItem}>
                     <FaCheckCircle className={styles.achievementCheck} />
-<<<<<<< HEAD
                     <span>2000+ Jamaah terbantu</span>
                   </div>
                   
-=======
-                    <span>25,000+ Jamaah terbantu</span>
-                  </div>
-                  <div className={styles.achievementItem}>
-                    <FaCheckCircle className={styles.achievementCheck} />
-                    <span>10+ Penghargaan</span>
-                  </div>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 </div>
               </div>
             </div>
@@ -585,14 +466,10 @@ const TentangKami = () => {
             <div className={styles.teamGrid}>
               {getVisibleMembers().map((member, index) => (
                 <div key={index} className={styles.teamCard}>
-<<<<<<< HEAD
                   <div 
                     className={`${styles.memberPhotoContainer} ${member.externalLink ? styles.clickablePhoto : ''}`}
                     onClick={() => handleMemberPhotoClick(member)}
                   >
-=======
-                  <div className={styles.memberPhotoContainer}>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                     <div className={styles.memberPhoto}>
                       <img 
                         src={member.photo} 
@@ -608,14 +485,11 @@ const TentangKami = () => {
                       </div>
                     </div>
                     <div className={styles.photoOverlay}></div>
-<<<<<<< HEAD
                     {member.externalLink && (
                       <div className={styles.externalLinkIndicator}>
                         <FaExternalLinkAlt />
                       </div>
                     )}
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                   </div>
                   
                   <div className={styles.memberInfo}>
@@ -627,10 +501,6 @@ const TentangKami = () => {
                         <FaMapMarkerAlt className={styles.metaIcon} />
                         <span>{member.location}</span>
                       </div>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                     </div>
                     
                     <p className={styles.memberBio}>{member.bio}</p>
@@ -685,15 +555,11 @@ const TentangKami = () => {
           </div>
           <div className={styles.partnersGrid}>
             {partners.map((partner, index) => (
-<<<<<<< HEAD
               <div 
                 key={index} 
                 className={`${styles.partnerCard} ${partner.externalLink ? styles.clickablePartner : ''}`}
                 onClick={() => handlePartnerClick(partner)}
               >
-=======
-              <div key={index} className={styles.partnerCard}>
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 <div className={styles.partnerLogo}>
                   {partner.logo ? (
                     <img 
@@ -704,14 +570,11 @@ const TentangKami = () => {
                   ) : (
                     <FaShieldAlt className={styles.partnerPlaceholder} />
                   )}
-<<<<<<< HEAD
                   {partner.externalLink && (
                     <div className={styles.partnerExternalLinkIndicator}>
                       <FaExternalLinkAlt />
                     </div>
                   )}
-=======
->>>>>>> 276ecda12d8f4a5fb488469d9ec02d95c3a6762b
                 </div>
                 <div className={styles.partnerInfo}>
                   <h3 className={styles.partnerName}>{partner.name}</h3>
